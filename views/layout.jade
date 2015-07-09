@@ -5,3 +5,11 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    if user
+      p
+        |Hello #{user.displayName}
+        ||
+        a(href="/logout") Logout
+    else
+      p
+        a(href="/auth/linkedin") Login
